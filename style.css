@@ -1,0 +1,178 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html
+{
+    background-color: hsl(36, 100%, 99%);
+}
+body
+{
+    margin: 50px;
+}
+.page
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav nav nav "
+    "img img new"
+    "img img new"
+    "img img new"
+    "img img new"
+    "head para new"
+    "card1 card2 card3";
+    gap: 10px;
+}
+.nav
+{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 30px 0;
+}
+.main_img
+{
+    grid-area: img;
+}
+.head
+{
+    grid-area: head;
+}
+.para
+{
+    grid-area:para;
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+}
+.new
+{
+    grid-area: new;
+    background-color: hsl(240, 100%, 5%);
+    padding: 20px 0 0 20px;
+    margin:0 0 90px 0 ;
+}
+.card1,.card2,.card3
+{
+    display: flex;
+}
+.card1
+{
+    grid-area:card1;
+}
+.card2
+{
+    grid-area:card2;
+}
+.card3
+{
+    grid-area: card3;
+}
+.card1 h1,.card2 h1,.card3 h1
+{
+    color: hsl(236, 13%, 42%);
+    padding: 0 0 0 20px; 
+}
+.card1 h2,.card2 h2,.card3 h2
+{
+    padding: 10px 20px; 
+}
+.card1 p,.card2 p,.card3 p
+{
+    color: hsl(236, 13%, 42%);
+    padding: 10px 20px; 
+}
+.para button
+{
+    background-color: hsl(5, 85%, 63%);
+    font-size: 20px;
+    display: block;
+    color: white;
+    border: none;
+    padding: 20px 60px;
+    margin: 20px 0px;
+}
+.para p
+{
+   padding: 30px 0;
+   font-size: 22px; 
+}
+#new
+{
+    color: hsl(35, 77%, 62%);
+    padding: 20px;
+}
+h1
+{
+    font-size: 70px;
+    padding:20px 0 40px 0;
+}
+h3
+{
+    color: hsl(233, 8%, 79%);
+    padding: 20px 20px 0 20px;
+}
+.new p
+{
+    color: hsl(236, 13%, 42%);
+    font-size:15px;
+    padding: 30px 20px;
+    font-weight: bold;
+    
+}
+hr{
+    color: hsl(236, 13%, 42%);
+    margin: 0 10px;
+}
+.main_img img
+{
+    width: 900px;
+    height:auto;
+}
+.card1 img,.card2 img,.card3 img
+{
+    width: 150px;
+    height: auto;
+}
+.nav button
+{
+    border: 0;
+    padding: 10px 0 0 100px ;
+    background: transparent;
+    cursor: pointer;
+    line-height: 1;
+    font-size: 20px;
+    color: hsl(236, 13%, 42%);
+}
+
+@media screen and (max-width:600px) {
+    .main_img img
+{
+    width: 550px;
+    height:auto;
+}
+body
+    {
+        margin: 20px;
+    }
+    .page
+    {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "nav"
+    "img"
+    "head"
+    "para"
+    "new"
+    "card1"
+    "card2"
+    "card3";
+    gap: 10px;
+    }
+}
